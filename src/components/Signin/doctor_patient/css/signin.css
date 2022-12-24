@@ -1,0 +1,16 @@
+#SigninCard{
+    margin: 0 auto; /* Added */
+    margin-top: 5vw;
+        float: none; /* Added */
+        width: 90vw;
+}
+
+@media screen and (min-width:1080px) {
+    #SigninCard{
+        margin: 0 auto; /* Added */
+        margin-top: 5vw;
+            float: none; /* Added */
+            width: 25vw;
+        margin-bottom: 5vw;
+    }
+  }

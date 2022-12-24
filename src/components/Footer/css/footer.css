@@ -1,0 +1,12 @@
+#footer {
+    position: relative;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  bottom: 0;
+  width: 100vw;
+  margin: -0px;
+}
+
+.footerteamicon{
+  width: 2rem;
+}

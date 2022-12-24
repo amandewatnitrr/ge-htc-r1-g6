@@ -1,0 +1,30 @@
+.navbarlogo{
+    margin-left: 1rem;
+}
+
+.nav-link{
+    margin-left: 1rem;
+}
+
+.d-flex{
+    margin-right: 2rem;
+}
+
+.signout{
+    margin-right: 1rem;
+    margin-left: 2rem;
+}
+
+.profile-pic{
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.me-auto{
+    margin-left: 2rem;
+}
+
+.nav-link{
+    color: gray;
+    margin: 0%;
+    padding: 0%;
+}

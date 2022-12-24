@@ -1,0 +1,57 @@
+
+
+- HOSPITAL TABLE
+    - Hospital_ID
+    - Hospital_NAME
+    - Hospital_ADDR
+    - Hospital_RegID
+    - Contact
+    - Hospital-Type
+
+- DOCTOR
+    - DOCTOR_ID
+    - Hospital_ID
+    - Doctor_NAME
+    - Doctor_Age
+    - Doctor_Spec
+    - Doctor_RegID
+    - License_ID
+    - Exp_YEARS
+    - DOJ -  Date of Joining
+    - AADHAR
+    - Hospital
+    - Designation
+    - CRED: MD, MBBS ...
+
+- Patient
+    - Patient_ID
+    - Hospital_ID
+    - Patient_NAME
+    - Patient_AGE
+    - Contact
+    - ADDRESS
+    - Patient_AADHAR
+    - GENDER
+    - Contact2
+    - Disability
+    - DOA - Date of Admission
+    - Hospital
+
+- Prescription
+    - Prescription_ID
+    - Hospital_ID
+    - Doctor_ID
+    - Patient_ID
+    - Date
+    - Prescription-text
+    - Diability
+    - Symptomps
+    - Medication
+
+- Medical Reports
+    - Report_ID
+    - Patient_ID
+    - Doctor_ID
+    - Date
+    - Observations
+    - Type

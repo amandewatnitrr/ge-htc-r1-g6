@@ -1,0 +1,174 @@
+- Login/Sign Up Page
+    - Navbar : Logo, Home, About_us
+    - Login Form
+        - Doctor/Patient
+            - Username
+            - Password
+            - Doctor/Patient
+        - Hospital
+            - Hospital_ID
+            - Hospital_Password
+    - Sign Up Form: Hospital
+        - Doctor
+            - Doctor_NAME
+            - Doctor_Age
+            - Doctor_Spec
+            - Doctor_RegID
+            - License_ID
+            - Exp_YEARS
+            - DOJ -  Date of Joining
+            - AADHAR
+            - Hospital
+            - Designation
+            - CRED
+        - Patient
+            - Patient_NAME
+            - Patient_AGE
+            - Contact
+            - ADDRESS
+            - Patient_AADHAR
+            - GENDER
+            - Contact2
+            - Disability
+            - DOA - Date of Admission
+            - Hospital
+        - Hospital
+            - Hospital_NAME
+            - Hospital_ADDR
+            - Hospital_RegID
+            - Hospital-Type
+            - Contact
+
+- Doctor
+    - Doctor Detail Card
+        - Doctor_NAME
+        - Doctor_Age
+        - Doctor_Spec
+        - Doctor_RegID
+        - License_ID
+        - Exp_YEARS
+        - DOJ -  Date of Joining
+        - AADHAR
+        - Hospital
+        - Designation
+        - CRED
+        - Consultation Graph
+
+    - Navbar
+        - Logo
+        - Profile
+            - Home
+            - Prescriptions
+            - Sign Out
+
+    - Prescriptions
+        -For Each Record in Table
+            - Prescription_ID
+            - Patient_Name
+            - Patient_ID
+            - Date
+            - On Click -> View Specific Prescription in Brief
+
+- Patient
+    - Patient Detail Card
+        - Patient_NAME
+        - Patient_AGE
+        - Contact
+        - ADDRESS
+        - Patient_AADHAR
+        - GENDER
+        - Contact2
+        - Disability
+        - DOA - Date of Admission
+        - Hospital
+        - Hospital_visit_graph
+    - Navbar
+        - Logo
+        - Profile
+            - Home
+            - Prescriptions
+            - Sign Out
+    - Prescriptions
+        -For Each Record in Table
+            - Prescription_ID
+            - Patient_Name
+            - Doctor_ID
+            - Date
+            - On Click -> View Specific Prescription in Brief
+
+- Hospital
+    - Navbar
+        - Logo
+        - ADD_DOCTOR
+        - ADD_PATIENT
+        - View_DOCTORS
+        - View_PATIENTS
+        - Sign Out
+
+    - Home
+        - Hospital_Slider_Img
+        - Hospital Details Card
+            - Name
+            - Hospital_ID
+            - Number_of_Doctors
+            - Departments
+            - Specialisation
+            - Address
+            - Contact
+        - About_us
+     
+    - View Patients
+        - Search Bar
+        - Records
+        - Each Record
+            - Patient NAME
+            - Patient ID
+            - Add Prescription
+            - Add Medical Reports
+            -> On Click -> Goes to Patient
+    
+    - View Doctors
+        - Search Bar
+        - Records
+        - Each Record
+            - Doctor NAME
+            - Doctor ID
+            -> On Click -> Goes to Doctor
+
+    - Add Prescription
+        - Form
+            - Patient_ID
+            - Doctor_ID
+            - Prescription-text
+            - Diability
+            - Symptomps
+            - Medication
+
+    - Add Medical Reports
+        - Form
+            - Patient_ID
+            - Doctor_ID
+            - Medical Report Upload
+            - Observations
+            - Type
+                
+- Footer
+    - Contacts
+    - Address
+    - Social Handles
+
+
+
+
+
+
+
+
+
+- Rough Microservice#1
+
+    - Based on Role
+    - Making seprate App for IAM: Will have to make seprate app for Authorization, Authentication and Identity Management
+    - Combining the above 2
+
+

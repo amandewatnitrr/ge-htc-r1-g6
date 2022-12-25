@@ -1,0 +1,21 @@
+#SignOutCard{
+    margin: 0 auto; /* Added */
+    margin-top: 5vw;
+        float: none; /* Added */
+        width: 90vw;
+}
+
+@media screen and (min-width:1080px) {
+    #SignOutCard{
+        margin: 0 auto; /* Added */
+        margin-top: 5vw;
+            float: none; /* Added */
+            width: 60vw;
+        margin-bottom: 5vw;
+    }
+
+    #addDoctor{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+  }

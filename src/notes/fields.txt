@@ -10,17 +10,17 @@
             - Hospital_Password
     - Sign Up Form: Hospital
         - Doctor
-            - Doctor_NAME
-            - Doctor_Age
-            - Doctor_Spec
-            - Doctor_RegID
-            - License_ID
-            - Exp_YEARS
-            - DOJ -  Date of Joining
-            - AADHAR
-            - Hospital
-            - Designation
-            - CRED
+            - Doctor_NAME -
+            - Doctor_Age -
+            - Doctor_Spec -
+            - Doctor_RegID -
+            - License_ID -
+            - Exp_YEARS -
+            - DOJ -  Date of Joining -
+            - AADHAR -
+            - Hospital -
+            - Designation -
+            - CRED -
         - Patient
             - Patient_NAME
             - Patient_AGE

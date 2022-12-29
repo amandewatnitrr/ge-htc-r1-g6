@@ -10,6 +10,8 @@ import pic1 from '../imgs/62e8f3d81329f4d3d4b3f7dc_StateofAutomationBlueHeader.p
 import './css/aboutus.css';
 import profilepic1 from '../imgs/aman.png'
 import profilepic2 from '../imgs/takchhya.png';
+import profilepic3 from '../imgs/gagan.png';
+import profilepic4 from '../imgs/aditya.png';
 
 function AboutUs() {
   return (
@@ -58,7 +60,7 @@ function AboutUs() {
                 <ul class="list-members">
                     <li class="member">
                         <div class="member-image">
-                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/1.png"/>
+                        <img src={profilepic3}/>
                         </div>
                         <div class="member-info">
                         <h5 id="team-mem-name">N.Gagan</h5>
@@ -100,7 +102,7 @@ function AboutUs() {
                     </li>
                     <li class="member">
                         <div class="member-image">
-                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/4.png"/>
+                        <img src={profilepic4}/>
                         </div>
                         <div class="member-info">
                         <h5 id="team-mem-name">Aditya Chourasia</h5>

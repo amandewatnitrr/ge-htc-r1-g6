@@ -44,7 +44,7 @@
     - Patient_ID
     - Date
     - Prescription-text
-    - Diability
+    - Disability
     - Symptomps
     - Medication
 

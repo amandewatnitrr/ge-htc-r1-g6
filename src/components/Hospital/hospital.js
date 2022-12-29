@@ -12,6 +12,7 @@ import doc1 from './imgs/doc1.jfif';
 import doc2 from './imgs/doc2.jfif';
 import pat1 from './imgs/pat1.jfif';
 import pat2 from './imgs/pat2.jfif';
+import gif1 from './imgs/hospital1.gif';
 import {
   Link,
 } from "react-router-dom";

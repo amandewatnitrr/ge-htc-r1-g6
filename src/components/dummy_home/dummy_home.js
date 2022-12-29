@@ -14,6 +14,7 @@ import ViewDoc from '../Hospital/ViewDoctors/view';
 import ViewPat from '../Hospital/ViewPatients/view'
 import AboutUs from '../AboutUs/aboutus';
 import NotFound from '../NotFound/notfound';
+import AddPrescription from '../Hospital/AddPrescription/add';
 
 import {
     BrowserRouter as Router,
@@ -44,6 +45,7 @@ function dummy_home() {
             <Route exact path='/Hospital/Add/Patient' element={<AddPat />} />
             <Route exact path='/Hospital/View/Doctor' element={<ViewDoc />} />
             <Route exact path='/Hospital/View/Patient' element={<ViewPat />} />
+            <Route exact path='/Hospital/Add/Prescription' element={<AddPrescription />} />
             <Route path="/*" element={<NotFound />} />
 
         </Routes>

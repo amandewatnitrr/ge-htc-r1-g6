@@ -21,7 +21,7 @@ import {
 
 const navbar = () => {
   return (
-    
+    <div class="sticky-top">
     <Navbar bg="dark" expand="md" variant="dark">   
       <Navbar.Brand>
       <Nav.Link class="nav-item" href='../../dummy_home/dummy_home.js'>
@@ -52,6 +52,7 @@ const navbar = () => {
         </Nav>
       </Navbar.Collapse> 
     </Navbar> 
+    </div>
   );  
 }  
 export default navbar;  

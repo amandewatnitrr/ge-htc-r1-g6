@@ -11,8 +11,14 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import './css/footer.css';
+import {
+  Link,
+} from "react-router-dom";
 
 export default function footer() {
+  const handleClick = () => {
+    window.scrollTo(0,0);
+  }
   return (
     <MDBFooter id='footer' bgColor='dark' color='white' className='text-center text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
@@ -57,22 +63,22 @@ export default function footer() {
             <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
-                <a href='#!' className='text-reset'>
+                <Link to="/Home" className='text-reset' onClick={handleClick}>
                   Home
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
+                <Link to="/AboutUs" className='text-reset' onClick={handleClick}>
                   About Us
-                </a>
+                </Link>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
+                <a href='#!' className='text-reset' onClick={handleClick}>
                   Register Hospital
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
+                <a href='#!' className='text-reset' onClick={handleClick}>
                   Help
                 </a>
               </p>

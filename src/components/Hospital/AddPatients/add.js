@@ -25,7 +25,7 @@ function Hospital() {
 
   return (
     <>
-        <div id="colour">
+        <div style={{'background':' linear-gradient(grey,lightblue,grey)'}}>
         <Navbar />
         <div id="new">
         <Card id='SignOutCard'>

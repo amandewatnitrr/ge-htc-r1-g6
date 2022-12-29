@@ -12,7 +12,7 @@ import {
 function hospital() {
   return (
     <>
-      <div id="colour">
+      <div style={{'background':' linear-gradient(grey,lightblue,grey)'}}>
         <Navbar />
         <br/>
         <div id='new'>

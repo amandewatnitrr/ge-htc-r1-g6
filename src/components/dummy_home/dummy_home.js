@@ -12,7 +12,8 @@ import AddDoc from '../Hospital/AddDoctors/add';
 import AddPat from '../Hospital/AddPatients/add';
 import ViewDoc from '../Hospital/ViewDoctors/view';
 import ViewPat from '../Hospital/ViewPatients/view'
-import AboutUs from '../AboutUs/aboutus'
+import AboutUs from '../AboutUs/aboutus';
+import NotFound from '../NotFound/notfound';
 
 import {
     BrowserRouter as Router,
@@ -24,9 +25,7 @@ function dummy_home() {
     return (
       <>
         <Router>
-        {/* <Navbar /> */}
         <Routes>
-            <Route exact path="/" element={<Navbar />} />
             
             <Route exact path='/Home' element={<Home />} />
             <Route exact path="/AboutUs" element={<AboutUs />} />
@@ -45,6 +44,7 @@ function dummy_home() {
             <Route exact path='/Hospital/Add/Patient' element={<AddPat />} />
             <Route exact path='/Hospital/View/Doctor' element={<ViewDoc />} />
             <Route exact path='/Hospital/View/Patient' element={<ViewPat />} />
+            <Route path="/*" element={<NotFound />} />
 
         </Routes>
         </Router>

@@ -32,7 +32,7 @@ function hospital() {
             <Carousel id="carouselhome">
               <Carousel.Item interval={2000}>
                 <center><img
-                id="carousel-item"
+                id="carousel-item-hospital"
                 className="d-block w-75"
                 src={pic}
                 alt="Hospital"
@@ -41,7 +41,7 @@ function hospital() {
               </Carousel.Item>
               <Carousel.Item interval={2000}>
                 <center><img
-                id="carousel-item"
+                id="carousel-item-hospital"
                 className="d-block w-75"
                 src={pic1}
                 alt="Iot"

@@ -7,12 +7,15 @@ import gif3 from '../imgs/c_hipertensao.gif';
 import Card from 'react-bootstrap/Card';
 import '../Home/css/home.css'
 import pic1 from '../imgs/62e8f3d81329f4d3d4b3f7dc_StateofAutomationBlueHeader.png';
+import './css/aboutus.css';
+import profilepic1 from '../imgs/aman.png'
 
 function AboutUs() {
   return (
-        <div style={{'background': 'linear-gradient(#36D1DC, #5B86E5)' }}>
+        <div style={{'background': 'linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% )' }}>
         <Navbar />
         <br/>
+
         <div id="home" style={{'min-height':'50vh'}}>
         <div id="row">
             <div id="column">
@@ -44,7 +47,77 @@ function AboutUs() {
                 </Card>
             </div>
             </div>
+
+            <br/>
+            <br/>
+            <center><h1><b><span id="title-our">Our</span> <span id="title-team">Team</span></b></h1></center>
+            <br/>
+
+            <div id="row">
+                <ul class="list-members">
+                    <li class="member">
+                        <div class="member-image">
+                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/1.png"/>
+                        </div>
+                        <div class="member-info">
+                        <h5 id="team-mem-name">N.Gagan</h5>
+                        <p>Backend Developer</p>
+                        <div class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="member">
+                        <div class="member-image">
+                        <img src={profilepic1}/>
+                        </div>
+                        <div class="member-info">
+                        <h5 id="team-mem-name">Aman Kumar Dewangan</h5>
+                        <p>Designer and Frontend Developer</p>
+                        <div class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="member">
+                        <div class="member-image">
+                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/3.png"/>
+                        </div>
+                        <div class="member-info">
+                        <h5 id="team-mem-name">Takchhya Kumari</h5>
+                        <p>Frontend Developer</p>
+                        <div class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="member">
+                        <div class="member-image">
+                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/4.png"/>
+                        </div>
+                        <div class="member-info">
+                        <h5 id="team-mem-name">Aditya Chourasia</h5>
+                        <p>Backend Developer</p>
+                        <div class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>       
+
             </div>
+
             <Footer />
             </div>
 

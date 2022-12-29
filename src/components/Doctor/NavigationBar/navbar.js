@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { FaUserAlt, FaBriefcaseMedical, FaSignOutAlt, FaFileMedical } from 'react-icons/fa';
+import { FaUserAlt, FaBriefcaseMedical, FaSignOutAlt, FaFileMedical, FaFilePrescription } from 'react-icons/fa';
 import {
   BrowserRouter as Router,
   Routes,
@@ -35,7 +35,7 @@ const navbar = () => {
           </Nav.Link>
           <Nav.Link class="nav-item" href="../../Prescription/doctor/Prescription.js">
           <Link className="nav-link" to="/Doctor/Prescription">
-            <FaFileMedical /> Prescriptions
+            <FaFilePrescription /> Prescriptions
           </Link>
           </Nav.Link>  
         </Nav>

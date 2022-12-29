@@ -25,9 +25,9 @@ function Hospital() {
 
   return (
     <>
-        <div style={{'background': 'linear-gradient(#7F7FD5, #91eae4)' }}>
+        <div id="colour">
         <Navbar />
-        <div style={{'min-height':'50vh'}}>
+        <div id="new">
         <Card id='SignOutCard'>
         <Card.Body>
         <Card.Header>
@@ -45,7 +45,7 @@ function Hospital() {
             placeholder="First name"
           />
           <Form.Control.Feedback type="invalid">
-              Please choose a username.
+              Please Enter First Name.
             </Form.Control.Feedback>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
@@ -57,22 +57,22 @@ function Hospital() {
             placeholder="Last name"
           />
           <Form.Control.Feedback type="invalid">
-              Please choose a username.
+              Please Enter Last Name.
             </Form.Control.Feedback>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="validationCustomUsername">
           <Form.Label>Username</Form.Label>
           <InputGroup hasValidation>
-            <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
             <Form.Control
               type="text"
-              placeholder="Username"
+              placeholder="Email ID"
               aria-describedby="inputGroupPrepend"
               required
             />
+            <InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>
             <Form.Control.Feedback type="invalid">
-              Please choose a username.
+              Enter Email ID
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
@@ -128,7 +128,7 @@ function Hospital() {
 
         <Form.Group as={Col} md="3" controlId="validationCustom05">
           <Form.Label>Zip</Form.Label>
-          <Form.Control type="text" placeholder="Zip" required />
+          <Form.Control type="text" placeholder="Zip" pattern="^\d{6}$" required />
           <Form.Control.Feedback type="invalid">
             Please provide a valid zip.
           </Form.Control.Feedback>
@@ -136,7 +136,7 @@ function Hospital() {
       </Row>
 
       <Row className="mb-3">
-        <Form.Group as={Col} md="2" controlId="validationCustom06">
+        <Form.Group as={Col} md="3" controlId="validationCustom06">
           <Form.Label>Age</Form.Label>
           <Form.Control type="Number" placeholder="Age" required />
           <Form.Control.Feedback type="invalid">
@@ -144,7 +144,21 @@ function Hospital() {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group as={Col} md="6" controlId="validationCustom03">
+        <Form.Group as={Col} md="4" controlId="dob">
+            <Form.Label>Date of Birth</Form.Label>
+            <Form.Control type="date" name="dob" placeholder="Date of Birth" required />
+        </Form.Group>
+
+        <Form.Group as={Col} md="5" controlId="validationCustom03">
+          <Form.Label>AADHAR Number</Form.Label>
+          <Form.Control type="text" placeholder="AADHAR Number" pattern="^\d{12}$" required />
+          <Form.Control.Feedback type="invalid">
+            Enter AADHAR NUMBER
+          </Form.Control.Feedback>
+        </Form.Group>
+      </Row>
+      <Row>
+        <Form.Group as={Col} md="4" controlId="validationCustom03">
           <Form.Label>Doctor Registration ID</Form.Label>
           <Form.Control type="text" placeholder="Doctor Registration ID" required />
           <Form.Control.Feedback type="invalid">
@@ -152,15 +166,23 @@ function Hospital() {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group as={Col} md="4" controlId="validationCustom03">
-          <Form.Label>AADHAR Number</Form.Label>
-          <Form.Control type="text" placeholder="AADHAR Number" required />
+        <Form.Group as={Col} md="4">
+          <Form.Label>Contact 1</Form.Label>
+          <Form.Control type="tel" placeholder="XXXXXXXXXX" pattern="^\d{10}$" required/>
           <Form.Control.Feedback type="invalid">
-            Enter AADHAR NUMBER
+            Enter your phone number
           </Form.Control.Feedback>
         </Form.Group>
 
+        <Form.Group as={Col} md="4">
+          <Form.Label>Contact 2</Form.Label>
+          <Form.Control type="tel" placeholder="XXXXXXXXXX" pattern="^\d{10}$" required/>
+          <Form.Control.Feedback type="invalid">
+            Enter your phone number
+          </Form.Control.Feedback>
+        </Form.Group>
       </Row>
+      <br />
 
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="formGridState">

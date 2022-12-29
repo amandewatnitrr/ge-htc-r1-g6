@@ -40,3 +40,7 @@
 #new{
   min-height: 50vh;
 }
+
+#colour{
+  background: linear-gradient(#7F7FD5, #91eae4);
+}

@@ -8,9 +8,9 @@ import Navbar from '../../Home/navbar/navbar';
 function SigninForm1() {
   return (
     <>
-    <div style={{'background': 'linear-gradient(#7F7FD5, #91eae4)' }}>
+    <div id="colour">
     <Navbar/>    
-    <div style={{'min-height':'50vh'}}>
+    <div id="new">
     <Card id='SigninCard'>
     <Card.Body>
     <Card.Header>

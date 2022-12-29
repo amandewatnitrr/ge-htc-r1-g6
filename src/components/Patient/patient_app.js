@@ -5,11 +5,15 @@ import Footer from '../Footer/footer.js';
 function patient_app() {
   return (
     <>
+    <div id="colour">
     <Navbar />
     <br/>
+    <div id='new'>
     <Patientcard />
+    </div>
     <br/>
     <Footer />
+    </div>
     </>
   );
 }

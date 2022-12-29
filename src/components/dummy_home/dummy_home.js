@@ -12,6 +12,7 @@ import AddDoc from '../Hospital/AddDoctors/add';
 import AddPat from '../Hospital/AddPatients/add';
 import ViewDoc from '../Hospital/ViewDoctors/view';
 import ViewPat from '../Hospital/ViewPatients/view'
+import AboutUs from '../AboutUs/aboutus'
 
 import {
     BrowserRouter as Router,
@@ -28,6 +29,7 @@ function dummy_home() {
             <Route exact path="/" element={<Navbar />} />
             
             <Route exact path='/Home' element={<Home />} />
+            <Route exact path="/AboutUs" element={<AboutUs />} />
             <Route exact path="/Signin/Doctor_or_Patient" element={<SigninDocPati />} />
             <Route exact path="/Signin/Hospital" element={<SigninHospital />} />
 

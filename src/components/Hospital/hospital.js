@@ -8,7 +8,7 @@ function hospital() {
     <>
         <div style={{'background': 'linear-gradient(#7F7FD5, #91eae4)' }}>
         <Navbar />
-        <div id="hospital" style={{'min-height':'50vh'}}>
+        <div id="new">
         Hospital
         </div>
         <Footer />

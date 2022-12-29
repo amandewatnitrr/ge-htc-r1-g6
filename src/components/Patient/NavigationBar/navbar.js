@@ -6,7 +6,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { FaUserAlt, FaBriefcaseMedical, FaSignOutAlt, FaFileMedical, FaNotesMedical } from 'react-icons/fa';
+import { FaUserAlt, FaBriefcaseMedical, FaSignOutAlt, FaFileMedical, FaNotesMedical, FaFilePrescription } from 'react-icons/fa';
+import {TbReportMedical} from 'react-icons/tb';
 import dummy from '../../dummy_home/dummy_home';
 import report from '../MedicalReport/report'
 import {
@@ -37,12 +38,12 @@ const navbar = () => {
           </Nav.Link>
           <Nav.Link class="nav-item" href="../Prescription/prescription">
             <Link className="nav-link" to="/Patient/Prescription">
-            <FaFileMedical /> Prescriptions
+            <FaFilePrescription /> Prescriptions
             </Link>
           </Nav.Link>  
           <Nav.Link class="nav-item" href="../MedicalReport/report">
             <Link className="nav-link" to="/Patient/Report">
-            <FaNotesMedical /> Medical Reports
+            <TbReportMedical /> Medical Reports
             </Link>
           </Nav.Link> 
         </Nav>

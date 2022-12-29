@@ -3,6 +3,7 @@ import Navbar from '../Navbar/navbar';
 import Footer from '../../Footer/footer';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
+import Card from 'react-bootstrap/Card';
 import './css/view.css';
 import {
   Link,
@@ -11,9 +12,12 @@ import {
 function hospital() {
   return (
     <>
+      <div id="colour">
         <Navbar />
+        <br/>
         <div id='new'>
-        <Table class="prescription-table" id="prescriptiontable" bordered striped hover responsive >
+        <Card>
+        <Table class="prescription-table" size="sm" id="prescriptiontable" bordered striped hover responsive>
             <tbody>
               <tr>
                 <th>Patient ID</th>
@@ -27,16 +31,18 @@ function hospital() {
                 <td>XXXXXXXX</td>
                 <td>XXX</td>
                 <td>XXXX Hospital</td>
-                <td><Button variant="outline-success">Add Prescription</Button></td>
-                <td><Button variant="outline-success">Add Report</Button></td>
+                <td><Button variant="outline-success" size="sm">Add Prescription</Button></td>
+                <td><Button variant="outline-success" size="sm">Add Report</Button></td>
                 <td>
-                <Link to='/Patient'><Button variant="outline-primary">Details</Button></Link>
+                <Link to='/Patient'><Button variant="outline-primary" size="sm">Details</Button></Link>
                 </td>
               </tr>
             </tbody>
           </Table>
+          </Card>
         </div>
         <Footer />
+      </div>
     </>
   )
 }

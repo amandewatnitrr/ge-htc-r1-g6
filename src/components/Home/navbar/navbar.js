@@ -27,8 +27,8 @@ const navbar = () => {
           <Nav.Link class="nav-item" href='../../Home/'>
           <Link className='nav-link' to="/Home"><FaHome /> Home</Link>
           </Nav.Link> 
-          <Nav.Link class="nav-item" href='../../AboutUs/'>
-          <Link className='nav-link' to="/About Us"><FcAbout /> About Us</Link>
+          <Nav.Link class="nav-item" href='#AboutUs'>
+          <Link className='nav-link' to="/AboutUs"><FcAbout />About Us</Link>
           </Nav.Link> 
         </Nav>
         <Nav>

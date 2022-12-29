@@ -5,10 +5,10 @@ import Footer from '../Footer/footer.js';
 function doctor_app() {
   return (
     <>
-    <div style={{'background': 'linear-gradient(#7F7FD5, #91eae4)' }}>
+    <div id="colour">
     <Navbar />
     <br/>
-    <div style={{'min-height':'50vh'}}>
+    <div id="new">
     <Patientcard />
     </div>
     <br/>

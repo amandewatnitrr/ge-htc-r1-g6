@@ -3,7 +3,9 @@ import {Nav, Navbar} from 'react-bootstrap';
 import transparent_logo from '../../dummy_home/imgs/logo.png';
 import './css/navbar.css'
 import Button from 'react-bootstrap/Button';
-import {FaBriefcaseMedical, FaSignOutAlt} from 'react-icons/fa';
+import {FaSignOutAlt, FaHospitalAlt} from 'react-icons/fa';
+import {HiUserAdd} from 'react-icons/hi';
+import {MdOutlineViewList} from 'react-icons/md';
 
 import {
     Link,
@@ -12,7 +14,6 @@ import {
 
 const navbar = () => {
   return (
-    
     <Navbar bg="dark" expand="md" variant="dark">   
       <Navbar.Brand>
       <Nav.Link class="nav-item" href='../dummy_home.js'>
@@ -25,19 +26,19 @@ const navbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">  
         <Nav className="me-auto">  
           <Nav.Link class="nav-item" href='../hospital'>
-          <Link className='nav-link' to="/Hospital"><FaBriefcaseMedical /> Hospital</Link>
+          <Link className='nav-link' to="/Hospital"><FaHospitalAlt /> Hospital</Link>
           </Nav.Link> 
           <Nav.Link class="nav-item" href='../AddDoctors/add'>
-          <Link className='nav-link' to="/Hospital/Add/Doctor"><FaBriefcaseMedical /> Add Doctor</Link>
+          <Link className='nav-link' to="/Hospital/Add/Doctor"><HiUserAdd /> Add Doctor</Link>
           </Nav.Link> 
           <Nav.Link class="nav-item" href='../AddPatients/add'>
-          <Link className='nav-link' to="/Hospital/Add/Patient"><FaBriefcaseMedical /> Add Patient</Link>
+          <Link className='nav-link' to="/Hospital/Add/Patient"><HiUserAdd /> Add Patient</Link>
           </Nav.Link> 
           <Nav.Link class="nav-item" href='../ViewDoctors/view'>
-          <Link className='nav-link' to="/Hospital/View/Doctor"><FaBriefcaseMedical /> View Doctor</Link>
+          <Link className='nav-link' to="/Hospital/View/Doctor"><MdOutlineViewList /> View Doctor</Link>
           </Nav.Link> 
           <Nav.Link class="nav-item" href='../ViewPatients/view'>
-          <Link className='nav-link' to="/Hospital/View/Patient"><FaBriefcaseMedical /> View Patient</Link>
+          <Link className='nav-link' to="/Hospital/View/Patient"><MdOutlineViewList /> View Patient</Link>
           </Nav.Link> 
         </Nav>
         <Nav class="signout">

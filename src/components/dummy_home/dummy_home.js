@@ -8,6 +8,7 @@ import Hospital from '../Hospital/hospital';
 import Home from '../Home/home';
 import SigninDocPati from '../Signin/doctor_patient/signin';
 import SigninHospital from '../Signin/hospital/signin';
+import SignupHospital from '../Signin/SignUp/signup';
 import AddDoc from '../Hospital/AddDoctors/add';
 import AddPat from '../Hospital/AddPatients/add';
 import ViewDoc from '../Hospital/ViewDoctors/view';
@@ -32,6 +33,7 @@ function dummy_home() {
             <Route exact path="/AboutUs" element={<AboutUs />} />
             <Route exact path="/Signin/Doctor_or_Patient" element={<SigninDocPati />} />
             <Route exact path="/Signin/Hospital" element={<SigninHospital />} />
+            <Route exact path="/Signup/Hospital" element={<SignupHospital />} />
 
             <Route exact path="/Patient" element={<Patient />} />
             <Route exact path="/Patient/Prescription" element={<PatientPrescription />} />

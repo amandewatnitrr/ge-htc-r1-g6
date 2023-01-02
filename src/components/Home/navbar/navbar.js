@@ -33,10 +33,13 @@ const navbar = () => {
         </Nav>
         <Nav>
         <Nav.Link class="nav-item" href='../../Signin/doctor_patient/signin.js'>
-        <Link className='nav-link' to="/Signin/Doctor_or_Patient"><Button id="signinbuttonnavbar" variant="success"><FaSignInAlt /> Sign In(Patient/Doctor)</Button></Link>
+        <Link className='nav-link' to="/Signin/Doctor_or_Patient"><Button id="signinbuttonnavbar" variant="success"><FaSignInAlt /> Sign In (Patient/Doctor)</Button></Link>
         </Nav.Link>
         <Nav.Link class="nav-item" href='../../Signin/hospital/signin.js'>
-        <Link className='nav-link' to="/Signin/Hospital"><Button id="signinbuttonnavbar" variant="success"><FaSignInAlt /> Sign In(Hospital)</Button></Link>
+        <Link className='nav-link' to="/Signin/Hospital"><Button id="signinbuttonnavbar" variant="success"><FaSignInAlt /> Sign In (Hospital)</Button></Link>
+        </Nav.Link>
+        <Nav.Link class="nav-item" href='../../Signin/Signup/signup.js'>
+        <Link className='nav-link' to="/Signup/Hospital"><Button id="signinbuttonnavbar" variant="success"><FaSignInAlt /> Register (Hospital)</Button></Link>
         </Nav.Link>
         </Nav>
       </Navbar.Collapse> 

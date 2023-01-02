@@ -6,13 +6,22 @@ import Button from 'react-bootstrap/Button';
 import {FaSignOutAlt, FaHospitalAlt} from 'react-icons/fa';
 import {HiUserAdd} from 'react-icons/hi';
 import {MdOutlineViewList} from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 import {
     Link,
   } from "react-router-dom";
 
 
-const navbar = () => {
+const Navigationbar = () => {
+
+  const navigate = useNavigate();
+
+  const logout = (e) => {
+    localStorage.removeItem('token-info');
+    navigate("/Home");
+  };
+  
   return (
     <div class="sticky-top">
     <Navbar bg="dark" expand="md" variant="dark">   
@@ -43,11 +52,11 @@ const navbar = () => {
           </Nav.Link> 
         </Nav>
         <Nav class="signout">
-          <Button variant="danger"><FaSignOutAlt /> Sign Out</Button>
+          <Button variant="danger" onClick={logout}><FaSignOutAlt /> Sign Out</Button>
         </Nav>
       </Navbar.Collapse> 
     </Navbar> 
     </div>
   );  
 }  
-export default navbar;  
+export default Navigationbar;  

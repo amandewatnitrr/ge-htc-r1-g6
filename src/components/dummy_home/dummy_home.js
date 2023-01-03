@@ -1,4 +1,3 @@
-import Navbar from './navbar/navbar';
 import Doctor from '../Doctor/doctor_app';
 import Patient from '../Patient/patient_app';
 import PatientPrescription from '../Prescription/Patient/prescription-record';
@@ -12,10 +11,11 @@ import SignupHospital from '../Signin/SignUp/signup';
 import AddDoc from '../Hospital/AddDoctors/add';
 import AddPat from '../Hospital/AddPatients/add';
 import ViewDoc from '../Hospital/ViewDoctors/view';
-import ViewPat from '../Hospital/ViewPatients/view'
+import ViewPat from '../Hospital/ViewPatients/view';
 import AboutUs from '../AboutUs/aboutus';
 import NotFound from '../NotFound/notfound';
 import AddPrescription from '../Hospital/AddPrescription/add';
+import AddReport from '../Hospital/AddMedRec/add';
 
 import {
     BrowserRouter as Router,
@@ -48,6 +48,7 @@ function dummy_home() {
             <Route exact path='/Hospital/View/Doctor' element={<ViewDoc />} />
             <Route exact path='/Hospital/View/Patient' element={<ViewPat />} />
             <Route exact path='/Hospital/Add/Prescription' element={<AddPrescription />} />
+            <Route exact path='/Hospital/Add/Report' element={<AddReport />} />
             <Route path="/*" element={<NotFound />} />
 
         </Routes>
@@ -56,6 +57,6 @@ function dummy_home() {
     );
   }
   
-  export default dummy_home;
+export default dummy_home;
 
 

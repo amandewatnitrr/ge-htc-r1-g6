@@ -32,7 +32,7 @@ function hospital() {
                 <td>XXX</td>
                 <td>XXXX Hospital</td>
                 <td> <Link to='/Hospital/Add/Prescription'><Button variant="outline-success" size="sm">Add Prescription</Button></Link></td>
-                <td><Button variant="outline-success" size="sm">Add Report</Button></td>
+                <td><Link to='/Hospital/Add/Report'><Button variant="outline-success" size="sm">Add Report</Button></Link></td>
                 <td>
                 <Link to='/Patient'><Button variant="outline-primary" size="sm">Details</Button></Link>
                 </td>

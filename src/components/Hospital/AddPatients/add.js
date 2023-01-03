@@ -7,20 +7,116 @@ import Card from 'react-bootstrap/Card';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useNavigate } from 'react-router-dom';
 import './css/add.css';
 
 function Hospital() {
 
+  const navigate = useNavigate();
+
+  let country = [
+      {label : "Choose state", value : ""},
+      {label : "Andhra Pradesh", value : "andhra pradesh"},
+      {label : "Arunachal Pradesh", value : "arunachal pradesh"},
+      {label : "Assam", value : "assam"},
+      {label : "Bihar", value : "bihar"},
+      {label : "Chhattisgarh", value : "chhattisgarh"},
+      {label : "D&D", value : "d&d"},
+      {label : "Goa", value : "goa"},
+      {label : "Gujrat", value : "gujrat"},
+      {label : "Haryana", value : "haryana"},
+      {label : "Himachal Pradesh", value : "himachal pradesh"},
+      {label : "Jammu and Kashmir", value : "jammu and kashmir"},
+      {label : "Jharkhand", value : "jharkhand"},
+      {label : "Karnataka", value : "karnataka"},
+      {label : "Kerala", value : "kerala"},
+      {label : "Ladakh", value : "ladakh"},
+      {label : "Madhya Pradesh", value : "madhya pradesh"},
+      {label : "Maharashtra", value : "maharashtra"},
+      {label : "Manipur", value : "manipur"},
+      {label : "Meghalaya", value : "meghalaya"},
+      {label : "Mizoram", value : "mizoram"},
+      {label : "Nagaland", value : "nagaland"},
+      {label : "Odisha", value : "odisha"},
+      {label : "Punjab", value : "punjab"},
+      {label : "Rajasthan", value : "rajasthan"},
+      {label : "Sikkim", value : "sikkim"},
+      {label : "Tamil Nadu", value : "tamil nadu"},
+      {label : "Telangana", value : "telangana"},
+      {label : "Tripura", value : "tripura"},
+      {label : "Uttar Pradesh", value : "uttar pradesh"},
+      {label : "Uttarakhand", value : "uttarakhand"},
+      {label : "West Bengal", value : "west bengal"},
+  ]
+
+  const [countrycode, setCountrycode] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [username, setUsername] = useState('');
+  const [address, setAddress] = useState('');
+  const [zip, setZip] = useState('');
+  const [aadhar, setAadhar] = useState('');
+  const [contact, setContact] = useState('');
+  const [contactb, setContactb] = useState('');
+
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+  const handleFirstname = (e) => {
+    setFirstname(e.target.value);
+    console.log(e.target.value)
+};
 
-    setValidated(true);
+const handleLastname = (e) => {
+  setLastname(e.target.value);
+  console.log(e.target.value)
+};
+
+  const handleUsername = (e) => {
+      setUsername(e.target.value);
+      console.log(e.target.value)
+  };
+
+  const handleAddress = (e) => {
+      setAddress(e.target.value);
+      console.log(e.target.value)
+  };
+
+  const handleZip = (e) => {
+      setZip(e.target.value);
+      console.log(e.target.value)
+  };
+
+  const handleAadhar = (e) => {
+      setAadhar(e.target.value);
+      console.log(e.target.value)
+  };
+  
+  const handleContact = (e) => {
+      setContact(e.target.value);
+      console.log(e.target.value)
+  };
+
+  const handleContactb = (e) => {
+      setContactb(e.target.value);
+      console.log(e.target.value)
+  };
+
+  const handleCountrycode = (e) => {
+      setCountrycode(e.target.value);
+  };
+  
+  const handleSubmit = (event) => {
+  const form = event.currentTarget;
+  if (form.checkValidity() === false) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  if(firstname !== '' && lastname !== '' && username !== '' && zip !== '' && address !== '' && contact !== '' && contactb !== '' && aadhar !== '' && countrycode !== ''){
+      navigate("/Hospital");
+  }
+
+  setValidated(true);
   };
 
   return (
@@ -43,6 +139,8 @@ function Hospital() {
             required
             type="text"
             placeholder="First name"
+            onChange={handleFirstname}
+            value={firstname}
           />
           <Form.Control.Feedback type="invalid">
               Please Enter First Name.
@@ -55,6 +153,8 @@ function Hospital() {
             required
             type="text"
             placeholder="Last name"
+            onChange={handleLastname}
+            value={lastname}
           />
           <Form.Control.Feedback type="invalid">
               Please Enter Last Name.
@@ -69,6 +169,8 @@ function Hospital() {
               placeholder="Email ID"
               aria-describedby="inputGroupPrepend"
               required
+              onChange={handleUsername}
+              value={username}
             />
             <InputGroup.Text id="inputGroupPrepend">@example.com</InputGroup.Text>
             <Form.Control.Feedback type="invalid">
@@ -80,7 +182,10 @@ function Hospital() {
       <Row className="mb-3">
         <Form.Group as={Col} md="6" controlId="validationCustom03">
           <Form.Label>City</Form.Label>
-          <Form.Control type="text" placeholder="City" required />
+          <Form.Control type="text" placeholder="City" required 
+          onChange={handleAddress}
+          value={address}
+          />
           <Form.Control.Feedback type="invalid">
             Please provide a valid city.
           </Form.Control.Feedback>
@@ -88,47 +193,18 @@ function Hospital() {
         
         <Form.Group as={Col} controlId="formGridState">
           <Form.Label>State/Union Territory</Form.Label>
-          <Form.Select defaultValue="Choose State/Union Territory" required>
-          <Form.Control required as="select" type="select"></Form.Control>
-          <option value="">Choose State...</option>
-          <option value="1">Andhra Pradesh</option>
-          <option value="2">Arunachal Pradesh</option>
-          <option value="3">Assam</option>
-          <option value="4">Bihar</option>
-          <option value="5">Chhattisgarh</option>
-          <option value="32">D&D</option>
-          <option value="6">Goa</option>
-          <option value="7">Gujarat</option>
-          <option value="8">Haryana</option>
-          <option value="9">Himachal Pradesh</option>
-          <option value="30">Jammu and Kashmir</option>
-          <option value="10">Jharkhand</option>
-          <option value="11">Karnataka</option>
-          <option value="12">Kerala</option>
-          <option value="31">Ladakh</option>
-          <option value="13">Madhya Pradesh</option>
-          <option value="14">Maharashtra</option>
-          <option value="15">Manipur</option>
-          <option value="16">Meghalaya</option>
-          <option value="17">Mizoram</option>
-          <option value="18">Nagaland</option>
-          <option value="19">Odisha</option>
-          <option value="20">Punjab</option>
-          <option value="21">Rajasthan</option>
-          <option value="22">Sikkim</option>
-          <option value="23">Tamil Nadu</option>
-          <option value="24">Telangana</option>
-          <option value="25">Tripura</option>
-          <option value="26">Uttar Pradesh</option>
-          <option value="27">Uttarakhand</option>
-          <option value="28">West Bengal</option>
-          <option value="29">Arunachal Pradesh</option>
+          <Form.Select onChange={handleCountrycode} required> 
+            <option value="">Select a Country</option>
+            {country.map((country) => <option value={country.value}>{country.label}</option>)}
           </Form.Select>
         </Form.Group>
 
         <Form.Group as={Col} md="3" controlId="validationCustom05">
           <Form.Label>Zip</Form.Label>
-          <Form.Control type="text" placeholder="Zip" pattern="^\d{6}$" required />
+          <Form.Control type="text" placeholder="Zip" pattern="^\d{6}$" required 
+          onChange={handleZip}
+          value={zip}
+          />
           <Form.Control.Feedback type="invalid">
             Please provide a valid zip.
           </Form.Control.Feedback>
@@ -151,7 +227,10 @@ function Hospital() {
 
         <Form.Group as={Col} md="5" controlId="validationCustom03">
           <Form.Label>AADHAR Number</Form.Label>
-          <Form.Control type="text" placeholder="AADHAR Number" pattern="^\d{12}$" required />
+          <Form.Control type="text" placeholder="AADHAR Number" pattern="^\d{12}$" required
+          onChange={handleAadhar}
+          value={aadhar}
+          />
           <Form.Control.Feedback type="invalid">
             Enter AADHAR NUMBER
           </Form.Control.Feedback>
@@ -161,14 +240,20 @@ function Hospital() {
       <Row>
         <Form.Group as={Col} md="4">
           <Form.Label>Contact 1</Form.Label>
-          <Form.Control type="tel" placeholder="XXXXXXXXXX" pattern="^\d{10}$" required/>
+          <Form.Control type="tel" placeholder="XXXXXXXXXX" pattern="^\d{10}$" required
+          onChange={handleContact}
+          value={contact}
+          />
           <Form.Control.Feedback type="invalid">
             Enter your phone number
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4">
           <Form.Label>Contact 2</Form.Label>
-          <Form.Control type="tel" placeholder="XXXXXXXXXX" pattern="^\d{10}$" required/>
+          <Form.Control type="tel" placeholder="XXXXXXXXXX" pattern="^\d{10}$" required
+          onChange={handleContactb}
+          value={contactb}
+          />
           <Form.Control.Feedback type="invalid">
             Enter your phone number
           </Form.Control.Feedback>

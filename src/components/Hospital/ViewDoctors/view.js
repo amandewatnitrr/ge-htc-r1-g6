@@ -4,12 +4,23 @@ import Footer from '../../Footer/footer';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
+import { useEffect, useState } from 'react';
+import axios from "axios";
 import './css/view.css';
 import {
   Link,
 } from "react-router-dom";
 
-function hospital() {
+function Hospital() {
+  const[employees, setEmployees] = useState([]);
+    useEffect(()=>{
+      axios
+        .get('http://127.0.0.1:8000/employee')
+        .then((response)=>{
+          setEmployees(response.data)
+          console.log(response.data)
+        })
+    },[])
   return (
     <>
       <div style={{'background':' linear-gradient(grey,lightblue,grey)'}}>
@@ -24,17 +35,21 @@ function hospital() {
                 <th>Doctor Name</th>
                 <th>Department</th>
                 <th>Hospital</th>
+                <th>Date of Joining</th>
                 <th>View Details</th> 
               </tr>
-              <tr>
-                <td>XXXXXXXX</td>
-                <td>XXX</td>
-                <td>XX</td>
+              {employees.map((employee)=>{
+                <tr key={employee.EmployeeId}>
+                <td>{employee.EmployeeId}</td>
+                <td>{employee.EmployeeName}</td>
+                <td>{employee.Department}</td>
                 <td>XXXX Hospital</td>
+                <td>{employee.DateOfJoining}</td>
                 <td>
                 <Link to='/Doctor'><Button variant="outline-primary" size="sm">Details</Button></Link>         
                 </td>     
                 </tr>
+              })}
             </tbody>
           </Table>
         </Card>
@@ -45,4 +60,4 @@ function hospital() {
   )
 }
 
-export default hospital;
+export default Hospital;

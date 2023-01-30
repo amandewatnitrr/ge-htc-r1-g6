@@ -1,7 +1,5 @@
 #!/bin/bash
 echo "Adding and commiting files"
-
-
 while [ "$1" != "" ] && [ "$1" != "-m" ]; do
 	#Prints file name being added
 	echo "Adding to staging area $1"
